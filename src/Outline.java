@@ -58,11 +58,22 @@ public class Outline {
         return 0;});
       System.out.println("4");
       System.out.println(Arrays.toString(stringArray));
-    }
-
-    public static void question2(){
-
   }
+
+  public static void question2(){
+      System.out.println("Question 2:");
+      String[] stringArray = {"elephant", "dog", "cat", "elephant", "zebra", "horse", "tiger"};
+
+      // Use a new method instead of the logic in q1.4.
+      Arrays.sort(stringArray, Outline::containsLetterLambdaHelper);
+      System.out.println(Arrays.toString(stringArray));
+  };
+
+  private static int containsLetterLambdaHelper(String l1, String l2) {
+      {if (l1.contains("e") && !l2.contains("e")) return -1;
+          if (l2.contains("e") && !l1.contains("e")) return 1;
+          return 0;}
+  };
 
   private static int firstLetter(String s) {
     return s.charAt(0);
