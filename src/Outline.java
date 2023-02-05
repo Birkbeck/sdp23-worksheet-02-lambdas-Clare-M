@@ -10,6 +10,7 @@ public class Outline {
     // Arrays.sort(intArray,.......)
     question1();
     question2();
+    question3();
   };
 
 
@@ -69,7 +70,15 @@ public class Outline {
       System.out.println(Arrays.toString(stringArray));
   };
 
+  public static void question3(){
+      System.out.println("Question 3:");
+      StringUtils newUtil = new StringUtils();
+      newUtil.betterString("Clare", "Melvin");
+      System.out.println(newUtil.betterString("This string is larger", "than this one"));
+  };
+
   private static int containsLetterLambdaHelper(String l1, String l2) {
+      // For question 2.
       {if (l1.contains("e") && !l2.contains("e")) return -1;
           if (l2.contains("e") && !l1.contains("e")) return 1;
           return 0;}
